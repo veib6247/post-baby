@@ -76,7 +76,11 @@
       <!-- FORM ACTION INPUT -->
       <div class="nes-field my-6">
         <label for="name_field">Form Action (POST)</label>
-        <input type="text" class="nes-input" v-model="formAction" />
+        <input
+          type="text"
+          class="nes-input"
+          spellcheck="false"
+          v-model="formAction" />
       </div>
 
       <!-- FIELDS -->
@@ -87,14 +91,22 @@
           <div class="flex-auto w-full">
             <div class="nes-field">
               <label for="name_field">Name</label>
-              <input type="text" class="nes-input" v-model="field.name" />
+              <input
+                type="text"
+                class="nes-input"
+                spellcheck="false"
+                v-model="field.name" />
             </div>
           </div>
 
           <div class="flex-auto w-full">
             <div class="nes-field">
               <label for="name_field">Value</label>
-              <input type="text" class="nes-input" v-model="field.value" />
+              <input
+                type="text"
+                class="nes-input"
+                spellcheck="false"
+                v-model="field.value" />
             </div>
           </div>
         </div>
