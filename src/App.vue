@@ -135,7 +135,9 @@
     </div>
 
     <!-- FOOTER -->
-    <footer class="my-24"></footer>
+    <footer class="my-24 text-center">
+      <a href="https://github.com/veib6247/post-baby" target="_blank">Github</a>
+    </footer>
   </div>
 </template>
 
