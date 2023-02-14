@@ -60,7 +60,7 @@
 </script>
 
 <template>
-  <div class="container m-auto px-24">
+  <div class="container m-auto px-40">
     <div class="my-12">
       <PageTitle>Post Baby</PageTitle>
       <p>This bad boi will submit your data.</p>
@@ -86,9 +86,9 @@
       <!-- FIELDS -->
       <div class="flex flex-col gap-6">
         <!-- LOOP HERE -->
-        <TransitionGroup name="list" tag="div">
+        <TransitionGroup class="flex flex-col gap-6" name="list" tag="div">
           <div class="flex gap-3" v-for="field in fields">
-            <div class="flex-auto w-full">
+            <div class="flex-auto w-96">
               <div class="nes-field">
                 <label for="name_field">Name</label>
                 <input
