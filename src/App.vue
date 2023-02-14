@@ -86,31 +86,31 @@
       <!-- FIELDS -->
       <div class="flex flex-col gap-6">
         <!-- LOOP HERE -->
-        <!-- 1 ROW -->
-        <div class="flex gap-3" v-for="field in fields">
-          <div class="flex-auto w-full">
-            <div class="nes-field">
-              <label for="name_field">Name</label>
-              <input
-                type="text"
-                class="nes-input"
-                spellcheck="false"
-                v-model="field.name" />
+        <TransitionGroup name="list" tag="div">
+          <div class="flex gap-3" v-for="field in fields">
+            <div class="flex-auto w-full">
+              <div class="nes-field">
+                <label for="name_field">Name</label>
+                <input
+                  type="text"
+                  class="nes-input"
+                  spellcheck="false"
+                  v-model="field.name" />
+              </div>
+            </div>
+
+            <div class="flex-auto w-full">
+              <div class="nes-field">
+                <label for="name_field">Value</label>
+                <input
+                  type="text"
+                  class="nes-input"
+                  spellcheck="false"
+                  v-model="field.value" />
+              </div>
             </div>
           </div>
-
-          <div class="flex-auto w-full">
-            <div class="nes-field">
-              <label for="name_field">Value</label>
-              <input
-                type="text"
-                class="nes-input"
-                spellcheck="false"
-                v-model="field.value" />
-            </div>
-          </div>
-        </div>
-
+        </TransitionGroup>
         <!-- BUTTONS!!! -->
         <div class="flex">
           <div class="flex-1">
@@ -139,4 +139,15 @@
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+  /** for fields transition */
+  .list-enter-active,
+  .list-leave-active {
+    transition: all 0.5s ease;
+  }
+  .list-enter-from,
+  .list-leave-to {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+</style>
